@@ -12,9 +12,8 @@ public class ConnectListener implements Listener {
         instanceServer.addConnectListener(new com.corundumstudio.socketio.listener.ConnectListener() {
             public void onConnect(SocketIOClient socketIOClient) {
                 System.out.println("Connect >>> "+socketIOClient.getSessionId());
+                socketIOClient.sendEvent("sd","df");
             }
         });
     }
-
-
 }

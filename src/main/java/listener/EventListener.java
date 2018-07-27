@@ -16,7 +16,7 @@ public class EventListener implements Listener {
     }
 
     private void initEventListener() {
-        server.addEventListener("test", Data.class, new DataListener<Data>() {
+        server.addEventListener("registration", Data.class, new DataListener<Data>() {
             public void onData(SocketIOClient socketIOClient, Data data, AckRequest ackRequest) throws Exception {
                 System.out.println(data.getData());
             }
