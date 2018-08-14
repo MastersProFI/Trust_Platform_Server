@@ -1,13 +1,8 @@
 package services;
 
 import com.corundumstudio.socketio.Configuration;
-import com.corundumstudio.socketio.SocketIOClient;
 import com.corundumstudio.socketio.SocketIOServer;
-import com.corundumstudio.socketio.listener.DefaultExceptionListener;
-import io.netty.channel.ChannelHandlerContext;
 import listener.*;
-
-import java.util.List;
 
 public class Server implements Service {
 
@@ -27,7 +22,7 @@ public class Server implements Service {
 
     private void configServer() {
         configuration = new Configuration();
-        configuration.setHostname("localhost");
+        configuration.setHostname("192.168.243.105");
         configuration.setPort(2580);
         configuration.setExceptionListener(new DefExceptionListener());
         server = new SocketIOServer(configuration);
